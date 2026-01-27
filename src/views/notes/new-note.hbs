@@ -1,0 +1,140 @@
+<div class="col-md-8 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1>Reserva</h1>
+        </div>
+        <form action="/notes/new-note" method="POST" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationTooltip01" required placeholder="Nombre" name="nombre">
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip02" class="form-label">Rut</label>
+                <input type="text" class="form-control" id="validationTooltip02" required placeholder="Rut" name="rut" >
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltipUsername" class="form-label">Gmail</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                    <input type="text" class="form-control" id="validationTooltipUsername"
+                        aria-describedby="validationTooltipUsernamePrepend" required name="gmail" >
+                    <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip01" class="form-label">Habitaciones</label>
+                <input type="text" class="form-control" name="habitaciones" id="validationTooltip01" required placeholder="De 1 a 3" max="3">
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip02" class="form-label">Adultos</label>
+                <input type="text" class="form-control" name="adultos" id="validationTooltip02" required placeholder="De 1 a 3" maxlength="3">
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip02" class="form-label">Niños</label>
+                <input type="text" class="form-control" name="niños" id="validationTooltip02"  required placeholder="De 0 a 3" maxlength="4">
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip01" class="form-label">Desde</label>
+                <div class="form-group"> <input class="form-control" name="desde" required type="date">
+                </div>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <label for="validationTooltip02" class="form-label">Hasta</label>
+                <div class="form-group"> <input class="form-control" name="hasta" required type="date" > </div>
+                <div class="valid-tooltip">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-12 position-relative">
+                <span class="form-label">Destino</span>
+                <div class="form-group">
+                    <form action="../../form-result.php" method="post" target="_blank">
+                        <p>
+                            <input class="form-control" type="email" list="listahoteles"  name="destino" required placeholder="Buscar Hotel..."
+                                >
+                        </p>
+                    </form>
+                    <datalist id="listahoteles">
+                        <option value="La Réserve Paris – Hotel and Spa. París, Francia">
+                        <option value="The Lodhi, Nueva Delhi, India">
+                        <option value="The Gainsborough Bath Spa, Somerset, Reino Unido">
+                        <option value="The Reverie Saigon, Ciudad Ho Chi Minh, Vietnam">
+                        <option value="Summer Lodge Country House Hotel and Spa, Dorset, Reino Unido">
+                        <option value="Royal Mansour, Marrakech, Marruecos">
+                        <option value="La Residence, Franschhoek, Sudáfrica">
+                        <option value="Fasano São Paulo, Brasil">
+                        <option value="Archipelagos Hotel, Mykonos, Grecia">
+                        <option value="Waldorf Astoria Amsterdam, Países Bajos">
+                        <option value="Faena Hotel Miami Beach, Florida, Estados Unidos">
+                        <option value="COMO The Treasury, Perth, Australia">
+                        <option value="Ballyfin, Co. Laois, Irlanda">
+                        <option value="Inkaterra La Casona, Cusco, Perú">
+                        <option value="Hotel Inkaterra Machu Picchu Pueblo, Aguas Calientes, Perú">
+                        <option value="The Fullerton Hotel, Singapur">
+                        <option value="Mystique (Luxury Collection), Santorini, Grecia">
+                        <option value="Hacienda de San Antonio, Comala, México">
+                        <option value="Waldorf Astoria Dubai Palm Jumeirah, Emiratos Árabes Unidos">
+                        <option value="Grand-Hôtel du Cap-Ferrat, un hotel Four Seasons, St-Jean-Cap-Ferrat, Francia">
+                        <option value="Belmond Hotel Cipriani, Venecia, Italia">
+                        <option value="Hotel d’Angleterre, Ginebra, Suiza">
+                        <option value="Hotel Mulia Senayan, Yakarta, Indonesia">
+                        <option value="Sun Rocks, Santorini, Grecia">
+                        <option value="Palacio Rambagh (Taj), Jaipur, India">
+                        <option value="Kos Aktis Art Hotel, Grecia">
+                        <option value="Fogo Island Inn, Terranova, Canadá">
+                        <option value="Canaves Oia Santorini, Grecia">
+                        <option value="Sofitel Legend Santa Clara, Cartagena, Colombia (VER REVIEW)">
+                        <option value="Langham Place, Nueva York, Quinta Avenida, Nueva York, Estados Unidos">
+                        <option value="Capri Tiberio Palace, Capri, Italia">
+                        <option value="Il Sereno, Lago de Como, Italia">
+                        <option value="Hotel Unique, São Paulo, Brasil (VER REVIEW)">
+                        <option value="The Singular Santiago, Hotel Lastarria, Santiago, Chile">
+                        <option value="Shangri-La Hotel, Qaryat Al Beri, Abu Dabi, Emiratos Árabes Unidos">
+                        <option value="Le Pavillon de la Reine, París, Francia">
+                        <option value="Hotel Bristol (Luxury Collection), Viena, Austria">
+                        <option value="Auberge Saint-Antoine, Québec City, Canadá">
+                        <option value="Abadia Retuerta LeDomaine, Valladolid, España">
+                        <option value="El Umstead Hotel and Spa, Cary, Carolina del Norte">
+                        <option value="COMO Uma Punakha, Bhután">
+                        <option value="The Ritz-Carlton, Kyoto, Japón">
+                        <option value="Finca Cortesin, Málaga, España">
+                        <option value="Taj Diplomatic Enclave (anteriormente Palace), Nueva Delhi, India">
+                        <option value="Umaid Bhawan Palace (Taj), Jodhpur, India">
+                        <option value="St. Regis Singapore,Singapur">
+                        <option value="Raffles Jakarta, Indonesia">
+                        <option value="Château La Chenevière, Port-en-Bessin, Francia">
+                        <option value="Hotel Kimpton EPIC, Miami, Florida">
+                        <option value="Wildflower Hall, Shimla en el Himalayas-An Oberoi Resort, India">
+                    </datalist>
+                </div>
+
+
+
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+        </form>
+    </div>
+</div>

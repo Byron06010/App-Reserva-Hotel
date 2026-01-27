@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+<div class="container">
+    <div class="row justify-content-center">
+
+        <div class="card " style="width: 21rem; border-radius: 15px;">
+            <img src="/img/hotel-app.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Hotel-App</h5>
+                <p class="card-text"> Bienvenido a Hotel-App una pagina web
+                    donde podras reservar en cualquier parte del mundo,con los mejores precios y la mejor
+                    disponibilidad.
+                <p class="card-text">
+                    <thead>
+                        <th><button type="button" class="btn btn-warning"><a href="/notes/add">Reserva Ahora
+                                </a></button></th>
+                        </tr>
+                    </thead>
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        {{#each notes}}
+        <tbody>
+
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{direccion}}</td>
+                <td>{{producto}}</td>
+                <td>{{cantidad}}</td>
+                <td>{{precio}}</td>
+                <td>{{pago}}</td>
+                <td>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-block btn-sm">Borrar</button>
+                    </form>
+                </td>
+                <td>
+                    <h4 class="justify-content-between -align-items-center">
+                        <a href="/notes/edit/{{_id}}"><i class="fa-solid fa-file-pen"></i></a>
+                </td>
+            </tr>
+        </tbody>
+        {{/each}}
+        </table>
+    </div>
+</div>
+</div>
+</div><br><br><br><br>
+<div class="container">
+    <div class="row calign-items-start">
+
+        <div class="card " style="width: 21rem;">
+            <img src="/img/Puerto Montt.jpg" class="card-img-top">
+            <p class="rating">9.2</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Puerto Mont,5480000
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 20,399</p>
+            </div>
+        </div>
+        <div class="card " style="width: 21rem;">
+            <img src="/img/valparaiso.jpg" class="card-img-top">
+            <p class="rating">8.9</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Valparaiso,555000
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 21,399</p>
+            </div>
+        </div>
+        <div class="card " style="width: 21rem;">
+            <img src="/img/isla de pascua.jpg" class="card-img-top">
+            <p class="rating">8.1</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Isla de pascua,5895000
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 15,000</p>
+            </div>
+        </div>
+        <div class="card " style="width: 21rem;">
+            <img src="/img/plaza españa.jpg" class="card-img-top">
+            <p class="rating">9.1</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Plaza España,2356000
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 30,000</p>
+            </div>
+        </div>
+        <div class="card " style="width: 21rem;">
+            <img src="/img/torre eiffel.jpg" class="card-img-top">
+            <p class="rating">9.5</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Torre Eiffel,8020003
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 42,000</p>
+            </div>
+        </div>
+        <div class="card " style="width: 21rem;">
+            <img src="/img/viña del mar.jpg" class="card-img-top">
+            <p class="rating">8.2</p>
+            <div class="card-body">
+                <h5 class="card-title">Hotel Casona Alemana</h5>
+                <p class="card-text"><i class="fa fa-map-marker marker"></i> Viña del Mar,8450009
+                </p>
+                <p class="card-text"><i class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i><i
+                        class="fa fa-star star-rating"></i><i class="fa fa-star star-rating"></i></p>
+                <p class="card-text">$ 12,400</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        style="background: rgba(255, 255, 255, 0.993);">
+        <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+</body>
+
+</html>

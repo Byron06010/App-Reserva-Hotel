@@ -1,0 +1,31 @@
+<div class="row">
+    {{#each notes}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                    Tu Reservacion
+                </h4>
+                <p>Nombre: {{nombre}}</p>
+                <p>Rut: {{rut}}</p>
+                <p>Gmail: {{gmail}}</p>
+                <p>Destino: {{destino}}</p>
+                <p>Habitaciones: {{habitaciones}}</p>
+                <p>Adultos: {{adultos}}</p>
+                <p>Niños: {{niños}}</p>
+                <p>Desde :{{desde}}</p>
+                <p>Hasta: {{hasta}}</p>
+                <button type="button" class="btn btn-warning"><a href="/notes/add">Agregar
+                        Venta</a></button>
+                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block btn-sm">Borrar</button>
+                </form>
+                <h4 class="justify-content-between -align-items-center">
+                    <a href="/notes/edit/{{_id}}"><i class="fa-solid fa-file-pen"></i></a>
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
